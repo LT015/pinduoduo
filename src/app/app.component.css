@@ -1,0 +1,26 @@
+ul {
+    padding: 0;
+    margin: 0;
+    /* 使用 FlexBox 布局 */
+    display: flex;
+    /* 将屏幕剩余空间平均分布于各子元素之间 */
+    justify-content: space-between;
+}
+
+ul li {
+    /* 去掉列表的 bullet */
+    display: inline-block;
+    margin: 10px;
+    /* 内容不折行显示 */
+    white-space: nowrap;
+}
+
+a {
+    /* 不显示下划线 */
+    text-decoration: none;
+}
+
+/* 不显示滚动条，只对基于 Webkit 内核的浏览器有效 */
+::-webkit-scrollbar {
+    display: none;
+}
