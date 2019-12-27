@@ -1,0 +1,9 @@
+<ul>
+    <!-- ngFor 指令是一个结构型指令，会在以所在的宿主节点为模版，循环创建节点 -->
+    <!-- menus 是定义在组件中的一个数组，而对数组中的每一个元素赋值给 menu 这个变量 -->
+    <li *ngFor="let menu of menus; let i = index;">
+        <a href="#" [class.active]="i === selectedIndex" (click)="handleSelection(i) ">
+            {{ menu.title }}
+        </a>
+    </li>
+</ul>
