@@ -8,8 +8,10 @@ ul {
 }
 
 ul li {
-    /* 去掉列表的 bullet */
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     margin: 10px;
     /* 内容不折行显示 */
     white-space: nowrap;
@@ -31,4 +33,11 @@ a {
 
 .first {
     color: green;
+}
+
+.indicator {
+    background-color: brown;
+    height: 2px;
+    width: 2rem;
+    margin-top: 2px;
 }
