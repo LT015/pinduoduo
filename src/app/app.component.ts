@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TopMenu } from './components';
+import {ImageSlider, TopMenu} from './components';
 
 
 @Component({
@@ -76,6 +76,39 @@ export class AppComponent {
         {
             title: '家具',
             link: ''
+        }
+    ];
+
+    imageSliders: ImageSlider[] = [
+        {
+            imgUrl:
+                'http://47.95.212.222:8080/images/notice/notices6.jpg',
+            link: '',
+            caption: ''
+        },
+        {
+            imgUrl:
+                'http://47.95.212.222:8080/images/notice/notices3.jpg',
+            link: '',
+            caption: ''
+        },
+        {
+            imgUrl:
+                'http://47.95.212.222:8080/images/notice/notices4.jpg',
+            link: '',
+            caption: ''
+        },
+        {
+            imgUrl:
+                'http://47.95.212.222:8080/images/notice/notices1.jpg',
+            link: '',
+            caption: ''
+        },
+        {
+            imgUrl:
+                'http://47.95.212.222:8080/images/notice/notices5.jpg',
+            link: '',
+            caption: ''
         }
     ];
 

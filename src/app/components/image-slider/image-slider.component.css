@@ -1,0 +1,50 @@
+.container {
+    position: relative;
+    overflow: hidden;
+}
+
+.container .image-slider {
+    display: flex;
+    /* 裁剪div元素中内容的左/右边缘 */
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    scroll-snap-align: start;
+}
+.nav-section {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /*透明度*/
+    opacity: 0.5;
+    color: #fff;
+    background-color: #000;
+    display: flex;
+    /*由右或者下开始排列*/
+    justify-content: flex-end;
+    align-items: stretch;
+}
+
+.nav-section .slide-button {
+    display: flex;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    /* 不显示下划线 */
+    text-decoration: none;
+    /* 给元素添加圆角的边框  来确定指示器的形状 */
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.nav-section .slide-button-select {
+    background-color: #e02f29;
+}
+

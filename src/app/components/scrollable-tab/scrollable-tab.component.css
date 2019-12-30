@@ -1,9 +1,13 @@
 ul {
     padding: 0;
     margin: 0;
+    /*  不超出屏幕 自动适应 */
+    overflow: auto;
+    /*  触摸滑动 */
+    -webkit-overflow-scrolling: touch;
     /* 使用 FlexBox 布局 */
     display: flex;
-    /* 将屏幕剩余空间平均分布于各子元素之间 */
+    /* 元素在主轴（页面）上的排列 将屏幕剩余空间平均分布于各子元素之间 */
     justify-content: space-between;
 }
 
@@ -12,7 +16,7 @@ ul li {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin: 10px;
+    margin: 0 5px;
     /* 内容不折行显示 */
     white-space: nowrap;
 }
@@ -36,7 +40,6 @@ a {
 }
 
 .indicator {
-    background-color: brown;
     height: 2px;
     width: 2rem;
     margin-top: 2px;
