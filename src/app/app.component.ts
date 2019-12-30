@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {ImageSlider, TopMenu} from './components';
+import {ImageSlider, TopMenu} from './shared/components';
 
 
 @Component({
