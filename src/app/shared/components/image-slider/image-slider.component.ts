@@ -1,6 +1,7 @@
-import {AfterViewInit, Component, ElementRef, Input, OnDestroy, OnInit, Renderer2, ViewChild} from '@angular/core';
+import {AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, Input, OnDestroy, OnInit, Renderer2, ViewChild} from '@angular/core';
 
 export interface ImageSlider {
+    id: number;
     imgUrl: string;
     link: string;
     caption: string;
@@ -8,10 +9,11 @@ export interface ImageSlider {
 
 
 @Component({
-  selector: 'app-image-slider',
-  templateUrl: './image-slider.component.html',
-  styleUrls: ['./image-slider.component.css']
-})
+    selector: 'app-image-slider',
+    templateUrl: './image-slider.component.html',
+    styleUrls: ['./image-slider.component.css'],
+    changeDetection: ChangeDetectionStrategy.OnPush
+}) // onPush 加完之后只有在input变量改变的时候才触发脏值检测，而且只引发他们这一个分支的脏值检测，不会跑整个的树 变成一个“笨组件”
 export class ImageSliderComponent implements OnInit, AfterViewInit, OnDestroy {
     @Input() sliders: ImageSlider[] = [];
     @Input() sliderHeight = '160px';

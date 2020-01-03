@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
 
 export interface Channel {
     id: number;
@@ -8,9 +8,10 @@ export interface Channel {
 }
 
 @Component({
-  selector: 'app-horizontal-grid',
-  templateUrl: './horizontal-grid.component.html',
-  styleUrls: ['./horizontal-grid.component.css']
+    selector: 'app-horizontal-grid',
+    templateUrl: './horizontal-grid.component.html',
+    styleUrls: ['./horizontal-grid.component.css'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HorizontalGridComponent implements OnInit {
     @Input() cols = 8; // 总列数
