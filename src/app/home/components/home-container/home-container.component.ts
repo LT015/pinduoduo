@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { TopMenu } from 'src/app/shared/components';
 import {Router} from '@angular/router';
 import {HomeService} from '../../services';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-home-container',
@@ -11,11 +12,9 @@ import {HomeService} from '../../services';
 export class HomeContainerComponent implements OnInit {
 
     constructor(private router: Router, private service: HomeService) { }
-    topMenus: TopMenu[] = [];
+    topMenus$: Observable<TopMenu[]>;
     ngOnInit() {
-        this.service.getTabs().subscribe(tabs => {
-            this.topMenus = tabs;
-        });
+        this.topMenus$ = this.service.getTabs();
     }
 
     handleTabSelected(topMenu: TopMenu) {

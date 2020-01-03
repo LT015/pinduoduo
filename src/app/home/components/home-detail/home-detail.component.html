@@ -1,7 +1,7 @@
-<div *ngIf="selectedTabLink === 'hot' else other">
-    <app-image-slider [sliders]="imageSliders"></app-image-slider>
+<div *ngIf="(selectedTabLink$ | async)=== 'hot' else other">
+    <app-image-slider [sliders]="imageSliders$ | async"></app-image-slider>
     <app-horizontal-grid>
-    <span appGridItem *ngFor="let item of channels">
+    <span appGridItem *ngFor="let item of channels$ | async">
         <img appGridItemImage="2rem" [src]="item.icon" alt="" />
         <span appGridItemTitle="0.6rem" class="title">{{ item.title }}</span>
     </span>
@@ -11,7 +11,7 @@
     Other works!
 </ng-template>
 <a
-    [routerLink]="['grand']"
+    [routerLink]="['parent']"
     routerLinkActive="active"
     [queryParams]="{ name: 'zhangsan', gender: 'male' }"
 >
