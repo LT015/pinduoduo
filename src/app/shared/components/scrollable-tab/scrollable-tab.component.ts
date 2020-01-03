@@ -14,7 +14,7 @@ export interface TopMenu {
 })
 export class ScrollableTabComponent implements OnInit {
 
-    selectedIndex = -1;
+    selectedIndex = 0;
 
     /**
      * 声明类型的好处是，可以及时的提示错误，可以试着改变下面的 title 或 link 的值类型
