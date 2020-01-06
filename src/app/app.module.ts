@@ -49,5 +49,6 @@ import {ChatModule} from './chat';
 export class AppModule {
     constructor() {
         registerLocaleData(localeZh, 'zh');
+        // “练习结果”分支用于学习
     }
 }
