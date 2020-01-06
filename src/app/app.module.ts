@@ -12,6 +12,7 @@ import {MyModule} from './my';
 import {CategoryModule} from './category';
 import {RecommendModule} from './recommend';
 import {ChatModule} from './chat';
+import {ProductModule} from './product';
 
 @NgModule({
     declarations: [
@@ -26,7 +27,8 @@ import {ChatModule} from './chat';
         RecommendModule,
         MyModule,
         CategoryModule,
-        ChatModule
+        ChatModule,
+        ProductModule
     ],
     providers: [
         {

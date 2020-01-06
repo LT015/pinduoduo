@@ -8,7 +8,8 @@ import {
     FooterComponent,
     VerticalGridComponent,
     ProductCardComponent,
-    ProductTileComponent
+    ProductTileComponent,
+    BackButtonComponent
 } from './components';
 import {FormsModule} from '@angular/forms';
 import {GridItemImageDirective,
@@ -36,6 +37,7 @@ import { AgoPipe } from './pipes';
         TagDirective,
         AvatarDirective,
         ProductTileComponent,
+        BackButtonComponent
     ],
     imports: [
         CommonModule,
@@ -58,6 +60,7 @@ import { AgoPipe } from './pipes';
         TagDirective,
         AvatarDirective,
         ProductTileComponent,
+        BackButtonComponent
     ]
 })
 export class SharedModule { }
