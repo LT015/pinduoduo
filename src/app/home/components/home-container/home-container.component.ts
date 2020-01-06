@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import { TopMenu } from 'src/app/shared/components';
 import {ActivatedRoute, Router} from '@angular/router';
 import {HomeService} from '../../services';
@@ -6,9 +6,10 @@ import {Observable} from 'rxjs';
 import {filter, map} from 'rxjs/internal/operators';
 
 @Component({
-  selector: 'app-home-container',
-  templateUrl: './home-container.component.html',
-  styleUrls: ['./home-container.component.css']
+    selector: 'app-home-container',
+    templateUrl: './home-container.component.html',
+    styleUrls: ['./home-container.component.css'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeContainerComponent implements OnInit {
 

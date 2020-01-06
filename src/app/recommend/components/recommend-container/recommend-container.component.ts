@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {HomeService} from 'src/app/home';
+import {filter, map} from 'rxjs/operators';
+import {Ad, Product} from 'src/app/shared';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-recommend-container',
@@ -7,9 +11,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecommendContainerComponent implements OnInit {
 
-  constructor() { }
+    constructor(private service: HomeService) { }
+    ad$: Observable<Ad>;
 
-  ngOnInit() {
+    products$: Observable<Product[]>;
+    ngOnInit() {
+        this.ad$ = this.service.getAdByTab('men').pipe(
+            filter(ads => ads.length > 0),
+            map(ads => ads[0])
+        );
+        this.products$ = this.service.getProductsByTab('men');
   }
 
 }
