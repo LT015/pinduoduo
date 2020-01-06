@@ -3,8 +3,8 @@
     <!-- menus 是定义在组件中的一个数组，而对数组中的每一个元素赋值给 menu 这个变量 -->
     <li *ngFor="let menu of menus; let i = index;">
         <a
-           [ngStyle]="{ color: i === selectedIndex ? titleActiveColor : titleColor }"
-           [class.active]="i === selectedIndex" (click)="handleSelection(i) "
+           [ngStyle]="{ color: menu.link === selectedTabLink ? titleActiveColor : titleColor }"
+           (click)="handleSelection(i) "
         >
             {{ menu.title }}
         </a>

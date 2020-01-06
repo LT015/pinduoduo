@@ -1,9 +1,9 @@
 import {ChangeDetectionStrategy, Component, OnDestroy, OnInit} from '@angular/core';
-import {ImageSlider, Channel} from 'src/app/shared/components';
+import {ImageSlider, Channel, Ad} from 'src/app/shared';
 import {ActivatedRoute} from '@angular/router';
 import {HomeService} from '../../services';
 import {Observable, Subscription} from 'rxjs';
-import {filter, map} from 'rxjs/internal/operators';
+import {filter, map, switchMap} from 'rxjs/internal/operators';
 
 @Component({
   selector: 'app-home-detail',
@@ -23,6 +23,8 @@ export class HomeDetailComponent implements OnInit, OnDestroy {
 
     sub: Subscription;
 
+    ad$: Observable<Ad>;
+
     ngOnInit() {
         this.selectedTabLink$ = this.route.paramMap.pipe(
           filter(params => params.has('tabLink')),
@@ -33,6 +35,11 @@ export class HomeDetailComponent implements OnInit, OnDestroy {
         });
         this.channels$ = this.service.getChannels();
         this.imageSliders$ = this.service.getBanners();
+        this.ad$ = this.selectedTabLink$.pipe(
+            switchMap(tab => this.service.getAdByTab(tab)),
+            filter( ads => ads.length > 0),
+            map(ads => ads[0])
+        );
     }
 
     ngOnDestroy() {
