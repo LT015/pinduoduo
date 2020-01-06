@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import {Channel, ImageSlider, TopMenu} from '../../shared/components';
-import {environment} from '../../../environments/environment';
+import {Channel, ImageSlider, TopMenu} from 'src/app/shared/components';
+import {environment} from 'src/environments/environment';
 import {HttpClient} from '@angular/common/http';
 
 @Injectable({

@@ -20,6 +20,7 @@ export class ScrollableTabComponent implements OnInit {
      * 声明类型的好处是，可以及时的提示错误，可以试着改变下面的 title 或 link 的值类型
      * 看 VS Code 中的提示
      */
+    @Input() selectedTabLink: string;
     @Input() menus: TopMenu[] ;
     @Input() backgroundColor = '#fff';
     @Input() titleActiveColor = 'yellow';
@@ -35,7 +36,6 @@ export class ScrollableTabComponent implements OnInit {
 
 
     handleSelection(index: number) {
-        this.selectedIndex = index;
-        this.tabSelected.emit(this.menus[this.selectedIndex]);
+        this.tabSelected.emit(this.menus[index]);
     }
 }
