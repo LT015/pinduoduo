@@ -5,7 +5,9 @@ import {SharedModule} from 'src/app//shared';
 import {
     ProductContainerComponent,
     GroupItemComponent,
-    GroupShortListComponent
+    GroupShortListComponent,
+    ProductVariantDialogComponent,
+    ProductAmountComponent
 } from './components';
 
 
@@ -13,11 +15,14 @@ import {
     declarations: [
         ProductContainerComponent,
         GroupItemComponent,
-        GroupShortListComponent
+        GroupShortListComponent,
+        ProductVariantDialogComponent,
+        ProductAmountComponent
     ],
     imports: [
         SharedModule,
         ProductRoutingModule
-    ]
+    ],
+    entryComponents: [ProductVariantDialogComponent]
 })
 export class ProductModule { }

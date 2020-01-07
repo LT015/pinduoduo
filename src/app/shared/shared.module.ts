@@ -19,6 +19,7 @@ import {GridItemImageDirective,
     AvatarDirective
 } from './directives';
 import { AgoPipe } from './pipes';
+import { DialogModule} from '../dialog';
 
 
 @NgModule({
@@ -60,7 +61,8 @@ import { AgoPipe } from './pipes';
         TagDirective,
         AvatarDirective,
         ProductTileComponent,
-        BackButtonComponent
+        BackButtonComponent,
+        DialogModule
     ]
 })
 export class SharedModule { }
