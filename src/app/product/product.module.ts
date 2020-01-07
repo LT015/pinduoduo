@@ -2,11 +2,19 @@ import { NgModule } from '@angular/core';
 
 import { ProductRoutingModule } from './product-routing.module';
 import {SharedModule} from 'src/app//shared';
-import {ProductContainerComponent} from './components';
+import {
+    ProductContainerComponent,
+    GroupItemComponent,
+    GroupShortListComponent
+} from './components';
 
 
 @NgModule({
-    declarations: [ProductContainerComponent],
+    declarations: [
+        ProductContainerComponent,
+        GroupItemComponent,
+        GroupShortListComponent
+    ],
     imports: [
         SharedModule,
         ProductRoutingModule

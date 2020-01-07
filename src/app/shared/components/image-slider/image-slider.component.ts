@@ -27,6 +27,9 @@ export class ImageSliderComponent implements OnInit, AfterViewInit, OnDestroy {
     }
 
     ngAfterViewInit(): void {
+        if (this.intervalBySeconds <= 0) {
+            return;
+        }
         this.intervalId = setInterval(() => {
             this.rd2.setProperty(
                 this.imgSlider.nativeElement,
