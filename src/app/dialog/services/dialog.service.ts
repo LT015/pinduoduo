@@ -11,7 +11,10 @@ export class DialogService {
     constructor(
         private domService: DomService,
         @Inject(DOCUMENT) private document: Document
-    ) {}
+    ) {
+        const initialData = localStorage.getItem('data');
+        this.data$ = new BehaviorSubject<object | null>(JSON.parse(initialData));
+    }
 
     open(component: Type<any>, config: ChildConfig) {
         this.domService.appendComponentTo(this.dialogElementId, component, config);
@@ -33,6 +36,8 @@ export class DialogService {
 
     saveData(data: object | null) {
         this.data$.next(data);
+        // 这里只是做个演示，其实应该存储的 key 是订单 id
+        localStorage.setItem('data', JSON.stringify(data));
     }
 
     getData() {
