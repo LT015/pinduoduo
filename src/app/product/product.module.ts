@@ -7,8 +7,10 @@ import {
     GroupItemComponent,
     GroupShortListComponent,
     ProductVariantDialogComponent,
-    ProductAmountComponent
+    ProductAmountComponent,
+    PaymentComponent
 } from './components';
+import { ConfirmOrderComponent } from './components/confirm-order/confirm-order.component';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import {
         GroupItemComponent,
         GroupShortListComponent,
         ProductVariantDialogComponent,
-        ProductAmountComponent
+        ProductAmountComponent,
+        PaymentComponent,
+        ConfirmOrderComponent
     ],
     imports: [
         SharedModule,

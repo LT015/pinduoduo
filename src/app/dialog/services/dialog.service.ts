@@ -36,7 +36,7 @@ export class DialogService {
     }
 
     getData() {
-        this.data$.asObservable();
+        return this.data$.asObservable();
     }
 
     private toggleAll() {
