@@ -5,17 +5,17 @@ import {ConfirmOrderComponent, ProductContainerComponent} from './components';
 
 const routes: Routes = [
     {
-        path: 'products',
+        path: '',
         children: [
+            {
+                path: 'confirm',
+                component: ConfirmOrderComponent
+            },
             {
                 path: ':productId',
                 component: ProductContainerComponent
             }
         ]
-    },
-    {
-        path: 'orders/confirm',
-        component: ConfirmOrderComponent
     }
 ];
 

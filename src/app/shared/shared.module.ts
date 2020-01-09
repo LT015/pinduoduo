@@ -9,7 +9,9 @@ import {
     VerticalGridComponent,
     ProductCardComponent,
     ProductTileComponent,
-    BackButtonComponent
+    BackButtonComponent,
+    ProductVariantDialogComponent,
+    ProductAmountComponent
 } from './components';
 import {FormsModule} from '@angular/forms';
 import {GridItemImageDirective,
@@ -38,11 +40,14 @@ import { DialogModule} from '../dialog';
         TagDirective,
         AvatarDirective,
         ProductTileComponent,
-        BackButtonComponent
+        BackButtonComponent,
+        ProductVariantDialogComponent,
+        ProductAmountComponent
     ],
     imports: [
         CommonModule,
-        FormsModule
+        FormsModule,
+        DialogModule
     ],
     exports: [
         CommonModule,
@@ -62,7 +67,9 @@ import { DialogModule} from '../dialog';
         AvatarDirective,
         ProductTileComponent,
         BackButtonComponent,
-        DialogModule
-    ]
+        ProductVariantDialogComponent,
+        ProductAmountComponent
+    ],
+    entryComponents: [ProductVariantDialogComponent]
 })
 export class SharedModule { }

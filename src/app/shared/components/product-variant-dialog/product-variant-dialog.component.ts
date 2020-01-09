@@ -6,7 +6,7 @@ import {
     EventEmitter,
     ChangeDetectionStrategy
 } from '@angular/core';
-import { ProductVariant } from '../../domain';
+import { ProductVariant } from '../../../product/domain';
 import { DialogService } from 'src/app/dialog/services';
 
 @Component({

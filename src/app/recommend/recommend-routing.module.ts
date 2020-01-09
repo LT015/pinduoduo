@@ -4,7 +4,7 @@ import {RecommendContainerComponent} from './components';
 
 
 const routes: Routes = [
-    { path: 'recommend', component: RecommendContainerComponent }
+    { path: '', component: RecommendContainerComponent }
 ];
 
 @NgModule({

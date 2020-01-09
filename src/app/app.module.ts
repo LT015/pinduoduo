@@ -24,11 +24,6 @@ import {ProductModule} from './product';
         AppRoutingModule,
         HomeModule,
         HttpClientModule,
-        RecommendModule,
-        MyModule,
-        CategoryModule,
-        ChatModule,
-        ProductModule
     ],
     providers: [
         {

@@ -5,8 +5,8 @@
   "projects": {
     "pinduoduo": {
       "projectType": "application",
+        "root": "",
       "schematics": {},
-      "root": "",
       "sourceRoot": "src",
       "prefix": "app",
       "architect": {

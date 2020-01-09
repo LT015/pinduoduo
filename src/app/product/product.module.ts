@@ -6,8 +6,6 @@ import {
     ProductContainerComponent,
     GroupItemComponent,
     GroupShortListComponent,
-    ProductVariantDialogComponent,
-    ProductAmountComponent,
     PaymentComponent
 } from './components';
 import { ConfirmOrderComponent } from './components/confirm-order/confirm-order.component';
@@ -18,15 +16,12 @@ import { ConfirmOrderComponent } from './components/confirm-order/confirm-order.
         ProductContainerComponent,
         GroupItemComponent,
         GroupShortListComponent,
-        ProductVariantDialogComponent,
-        ProductAmountComponent,
         PaymentComponent,
         ConfirmOrderComponent
     ],
     imports: [
         SharedModule,
         ProductRoutingModule
-    ],
-    entryComponents: [ProductVariantDialogComponent]
+    ]
 })
 export class ProductModule { }

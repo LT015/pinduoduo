@@ -4,7 +4,7 @@ import {CategoryContainerComponent} from './components';
 
 
 const routes: Routes = [
-    { path: 'category', component: CategoryContainerComponent }
+    { path: '', component: CategoryContainerComponent }
 ];
 @NgModule({
   imports: [RouterModule.forChild(routes)],
